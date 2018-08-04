@@ -1,0 +1,81 @@
+<html>
+<style>
+body{
+  font-family: Verdana;
+  text-indent: 50px;
+  font-size: 30px;
+  color: black;
+}
+.content-box {
+  width: 100%;
+  height: 600px;
+  position: absolute;
+  background-color: pink;
+}
+#buttons {
+  margin: 0 auto;
+  width: 40%;
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 20px;
+}
+#buttons a {
+  background-color: black;
+  color: #D81E5B;
+  padding: 10px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 4px;
+}
+#buttons a:active {
+  transform: translateY(2px);
+}
+</style>
+<body style="background-color: #7B0D1E";>
+<h1 style="color: pink"> <center>Random Name Generator</center> </h1>
+<div id="buttons">
+ <a onclick="showBoy()"> Boy </a>
+ <a onclick="showGirl()"> Girl </a>
+ <a onclick="showUnisex()"> Unisex </a>
+</div>
+<div class="content-box">
+<center><h1 id="nameBox"> </h1></center>
+</div>
+
+<script>
+
+var boy = ["Jason", "Michael", "Brent", "Shane", "Steven", "Edwin", "Arthur", "Freddy", "John", "Julian", "David", "James", "Mason",
+"Anthony", "Daniel", "Bryan", "Christopher","Manny", "Eric", "Graham", "Joshua", "Jackson", "Henry", "Thomas", "Ethan", "Oscar", "Senai",
+"Xavier", "Jonathan", "Emiliano", "Diego", "Franklin", "Akeem","Justin", "Elijah", "Nigel", "Zachary", "Jerry", "Jeffrey", "Zion", "Joseph",
+"Peter", "Alfie", "Alfred", "Vance", "Lance", "Scotty", "Donald", "Rico", "Jaden", "Jeffrey", "Ty", "Matthew", "Zack", "Xavier",
+"calvin", "Kevin", "Drake", "Jeremiah", "Moses", "Bryson", "Malichi", "Tasan", "Ross", "Toby", "Mamadou", "Travis", "Nick", "Rick", "Grayson",
+"Henrique", "Steve"]
+var girl = ["Jada", "Bridget", "Leila", "Jade", "Eva", "Jessica", "Kassie", "Kassandra", "Samantha", "Zaina", "Ava", "Ariana", "Ariel",
+"Shayla", "Charlotte", "Amber", "Haley", "Sybil", "Jeannette", "Martina", "Pamela", "Denise", "Katherine", "Kyrha", "Natalie", "Natalia",
+"Hannah", "Krystal", "Kimberly", "Julia", "Kaitlyn", "Caitlin", "Kiara", "Bianca", "Naiya", "Niya", "Maya", "Brianna", "Nicole",
+"Rachel", "Alyssa", "Genesis", "Alexa", "Zoe", "Reina", "Kira", "Ikira", "Lindsay", "Katie", "Ariana", "Abigail", "Tessah",
+"Jennifer", "Karoline", "Lauren", "Sabrina", "Angela", "Angelina", "Elizabeth", "Jenna", "Ashley", "Kelly", "Kayla", "Keila",
+"Nayelis", "Daphne", "Harmony", "Megan", "Anna", "Skye", "Johanna", "Adela", "Safiya", "Sofia", "Nala", "Emily", "Mia", "Izzy",
+"Isabella", "Bella", "Lilly", "Destynee", "Ella", "Amanda", "Tanisha", "Rebecca", "Sinthya", "Emma", "Jada", "Vanessa", "Yasmine",
+"Yazmeene", "Reign"]
+var unisex = ["Kayden", "Cameron", "Alex", "Jordan", "Taylor", "Dani", "Ryan", "Jayden", "Sascha", "Kennedy", "Alexis", "Dylan",
+"Ayanna", "Sydney", "Avery", "Payton", "Dakota", "Angel", "Parker", "Reese", "Quinn", "Rowan", "Charlie", "Tatum", "Cleo", "Frankie",
+"Sam", "Blake", "Jesse", "Skylar", "Joey", "Jamie", "Rueben", "Mackenzie", "Hayden", "Harley", "Adrian", "Casey", "Kai", "Morgan", "Oakley",
+"Phoenix", "Logan","Tony" ,"Riley"]
+var nameBox = document.getElementById("nameBox");
+
+function showGirl(){
+  var i = Math.floor(girl.length*(Math.random()))
+  nameBox.innerHTML = girl[i]
+}
+function showBoy(){
+  var i = Math.floor(boy.length*(Math.random()))
+  nameBox.innerHTML = boy[i]
+  }
+function showUnisex(){
+  var i = Math.floor(unisex.length*(Math.random()))
+  nameBox.innerHTML = unisex[i]
+}
+</script>
+</body>
+</html>
